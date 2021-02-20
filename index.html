@@ -1,17 +1,27 @@
 <script> 
 
+var Colours = ["rosso", "verde", "giallo", "blu", "arancio", "viola", "rosa", "marrone", "nero"];
+
 // Funzione
  function myFunction() {
     col = document.getElementById("myid").value;
      marca = document.getElementById("myid2").value;
       var Auto = { 
         colore: col, 
-        marca: marca };
+        marca: marca 
+        };
+      col = col.toLowerCase();
+      marca = marca.toLowerCase();
+        if(! Colours.indexOf(col) >= 0){
+          alert("suca");
+          document.getElementById("demo2").innerHTML = "Rosso?";
+        }
          document.getElementById("demo").innerHTML = "<b>Hai scelto un auto di colore " + Auto["colore"] + " e di marca " + Auto["marca"] + "</b>"; 
          } 
 </script> 
          <h3>Scegli Auto</h3>
           <p id="demo"></p>
+          <p id="demo2"></p>
           Colore: <input type="text" id="myid"> 
           <br /> <br /> 
           Marca: <input type="text" id="myid2"> <button onclick="myFunction()">Invia i dati</button>
