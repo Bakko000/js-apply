@@ -1,1 +1,17 @@
-<div id="app"></div>
+<script> 
+
+// Funzione
+ function myFunction() {
+    col = document.getElementById("myid").value;
+     marca = document.getElementById("myid2").value;
+      var Auto = { 
+        colore: col, 
+        marca: marca };
+         document.getElementById("demo").innerHTML = "<b>Hai scelto un auto di colore " + Auto["colore"] + " e di marca " + Auto["marca"] + "</b>"; 
+         } 
+         </script> 
+         <h3>Scegli Auto</h3>
+          <p id="demo"></p>
+          Colore: <input type="text" id="myid"> 
+          <br /> <br /> 
+          Marca: <input type="text" id="myid2"> <button onclick="myFunction()">Invia i dati</button>
